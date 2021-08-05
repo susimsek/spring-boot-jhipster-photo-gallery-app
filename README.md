@@ -44,6 +44,11 @@ docker-compose up -d
 * Internationalization
 * Jwt Authentication
 * User Management
+* Unit tests using JUnit 5
+* Integration tests using the Spring Test Context framework
+* UI tests with Jest.
+* Architecture tests with ArchUnit
+* UI integration with Protractor
 
 ### Supported languages
 
