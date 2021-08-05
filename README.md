@@ -24,6 +24,12 @@
 docker-compose up -d 
 ```
 
+## Swagger
+<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/swagger.png" alt="Spring Boot Jhipster Photo Gallery App Swagger" width="100%" height="100%"/>
+
+## User Management
+<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/user-management.png" alt="Spring Boot Jhipster Photo Gallery User Management" width="100%" height="100%"/>
+
 ## Used Technologies
 
 * Jhipster
@@ -48,7 +54,7 @@ docker-compose up -d
 * Integration tests using the Spring Test Context framework
 * UI tests with Jest.
 * Architecture tests with ArchUnit
-* UI integration with Protractor
+* UI integration test with Protractor
 
 ### Supported languages
 
