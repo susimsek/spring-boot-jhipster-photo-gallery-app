@@ -1,11 +1,11 @@
 # Spring Boot Jhipster Photo Gallery Example
   
-<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image1.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>
-<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image2.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>
-<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image3.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>
-<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image4.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>
-<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image4.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>
-<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image5.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>
+<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image1.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>  
+<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image2.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>  
+<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image3.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>  
+<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image-4.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>  
+<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image-5.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>  
+<img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/app-image-6.png" alt="Spring Boot Jhipster Photo Gallery App" width="100%" height="100%"/>
 
 ## Prerequisites
 
