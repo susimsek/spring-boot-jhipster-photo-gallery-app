@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gallery
+  namespace: default
+  labels:
+    app: gallery
+spec:
+  selector:
+    app: gallery
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: 9090

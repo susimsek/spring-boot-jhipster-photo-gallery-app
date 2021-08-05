@@ -1,0 +1,33 @@
+{
+  "galleryApp": {
+    "photo": {
+      "home": {
+        "title": "Photos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Photo",
+        "createOrEditLabel": "创建或编辑 Photo",
+        "search": "查找 Photo",
+        "notFound": "No Photos found"
+      },
+      "created": "Photo {{ param }} 创建成功",
+      "updated": "Photo {{ param }} 更新成功",
+      "deleted": "Photo {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Photo {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Photo"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "image": "Image",
+      "height": "Height",
+      "width": "Width",
+      "taken": "Taken",
+      "uploaded": "Uploaded",
+      "album": "Album",
+      "tag": "Tag"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "galleryApp": {
+    "tag": {
+      "home": {
+        "title": "Tags",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Tag",
+        "createOrEditLabel": "Genera o modifica un Tag",
+        "search": "Cerca Tag",
+        "notFound": "No Tags found"
+      },
+      "created": "&Egrave; stato generato un nuovo Tag con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Tag identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Tag con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Tag {{ id }}?"
+      },
+      "detail": {
+        "title": "Tag"
+      },
+      "id": "ID",
+      "name": "Name",
+      "photo": "Photo"
+    }
+  }
+}

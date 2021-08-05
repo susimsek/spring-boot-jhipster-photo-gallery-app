@@ -1,0 +1,119 @@
+version: '3.8'
+services:
+  gallery-app:
+    image: suayb/gallery:latest
+    container_name: gallery-app
+    restart: ${RESTART_POLICY}
+    networks:
+      - back-tier
+    depends_on:
+      - postgresql
+      - redis
+      - elasticsearch
+    environment:
+      - TZ
+      - _JAVA_OPTIONS
+      - SPRING_PROFILES_ACTIVE
+      - SPRING_DATASOURCE_URL
+      - SPRING_DATASOURCE_USERNAME
+      - SPRING_DATASOURCE_PASSWORD
+      - JHIPSTER_CACHE_REDIS_SERVER
+      - JHIPSTER_CACHE_REDIS_CLUSTER
+      - JHIPSTER_CACHE_REDIS_EXPIRATION
+      - JHIPSTER_SLEEP
+      - SPRING_ELASTICSEARCH_REST_URIS
+      - SPRING_MAIL_HOST
+      - SPRING_MAIL_PORT
+      - SPRING_MAIL_USERNAME
+      - SPRING_MAIL_PASSWORD
+      - SPRING_MAIL_TLS
+      - SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH
+      - SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE
+      - SPRING_MAIL_PROPERTIES_MAIL_SMTP_SSL_TRUST
+      - JHIPSTER_MAIL_BASE_URL
+      - JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET
+      - JHIPSTER_SECURITY_AUTHENTICATION_JWT_TOKEN_VALIDITY_IN_SECONDS
+      - JHIPSTER_SECURITY_AUTHENTICATION_JWT_TOKEN_VALIDITY_IN_SECONDS_FOR_REMEMBER_ME
+    ports:
+      - 9090:9090
+
+  postgresql:
+    image: bitnami/postgresql:13
+    container_name: postgresql
+    restart: ${RESTART_POLICY}
+    networks:
+      - back-tier
+    environment:
+      - TZ
+      - POSTGRESQL_LOG_TIMEZONE
+      - POSTGRESQL_USERNAME
+      - POSTGRESQL_PASSWORD
+      - POSTGRESQL_DATABASE
+      - POSTGRESQL_POSTGRES_PASSWORD
+    volumes:
+      - postgresql_data:/bitnami/postgresql
+    ports:
+      - 5432:5432
+
+  redis:
+    image: bitnami/redis:6.2
+    container_name: redis
+    restart: ${RESTART_POLICY}
+    networks:
+      - back-tier
+    environment:
+      - TZ
+      - REDIS_PASSWORD
+    volumes:
+      - redis_data:/bitnami/redis/data
+    ports:
+      - 6379:6379
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.3
+    container_name: elasticsearch
+    restart: ${RESTART_POLICY}
+    networks:
+      - back-tier
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    environment:
+      - discovery.type
+      - ES_JAVA_OPTS
+      - xpack.security.enabled
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.9.3
+    container_name: kibana
+    restart: ${RESTART_POLICY}
+    networks:
+      - back-tier
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_URL
+    ports:
+      - 5601:5601
+
+networks:
+  back-tier:
+    driver: bridge
+    name: back-tier
+
+volumes:
+  postgresql_data:
+    driver: local
+    name: postgresql_data
+  redis_data:
+    driver: local
+    name: redis_data
+  elasticsearch_data:
+    driver: local
+    name: elasticsearch_data

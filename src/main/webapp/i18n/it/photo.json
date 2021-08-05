@@ -1,0 +1,33 @@
+{
+  "galleryApp": {
+    "photo": {
+      "home": {
+        "title": "Photos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Photo",
+        "createOrEditLabel": "Genera o modifica un Photo",
+        "search": "Cerca Photo",
+        "notFound": "No Photos found"
+      },
+      "created": "&Egrave; stato generato un nuovo Photo con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Photo identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Photo con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Photo {{ id }}?"
+      },
+      "detail": {
+        "title": "Photo"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "image": "Image",
+      "height": "Height",
+      "width": "Width",
+      "taken": "Taken",
+      "uploaded": "Uploaded",
+      "album": "Album",
+      "tag": "Tag"
+    }
+  }
+}

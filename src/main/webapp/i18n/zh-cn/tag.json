@@ -1,0 +1,26 @@
+{
+  "galleryApp": {
+    "tag": {
+      "home": {
+        "title": "Tags",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Tag",
+        "createOrEditLabel": "创建或编辑 Tag",
+        "search": "查找 Tag",
+        "notFound": "No Tags found"
+      },
+      "created": "Tag {{ param }} 创建成功",
+      "updated": "Tag {{ param }} 更新成功",
+      "deleted": "Tag {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Tag {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Tag"
+      },
+      "id": "ID",
+      "name": "Name",
+      "photo": "Photo"
+    }
+  }
+}

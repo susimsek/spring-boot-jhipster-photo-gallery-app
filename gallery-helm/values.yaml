@@ -1,0 +1,74 @@
+postgresql:
+  enabled: true
+  fullnameOverride: postgresql
+  postgresqlPostgresPassword: "1234"
+  postgresqlUsername: gallery_admin
+  postgresqlPassword: "1234"
+  postgresqlDatabase: gallery
+  audit:
+    logTimezone: Europe/Istanbul
+  service:
+    type: ClusterIP
+    port: 5432
+  persistence:
+      enabled: true
+      existingClaim: "gallery-volume-claim"
+      mountPath: /bitnami/postgresql
+      subPath: gallery_data/postgresql_data
+redis:
+    enabled: true
+    fullnameOverride: redis
+    architecture: standalone
+    auth:
+        enabled: true
+        password: "1234"
+    master:
+        service:
+            type: ClusterIP
+            port: 6379
+        persistence:
+            enabled: true
+            existingClaim: "gallery-volume-claim"
+            path: /data
+            subPath: gallery_data/redis_data
+elasticsearch:
+    enabled: true
+    httpPort: 9200
+    replicas: 1
+    extraEnvs:
+      -  name: discovery.type
+         value: single-node
+      -  name: cluster.initial_master_nodes
+         value: null
+    antiAffinity: "soft"
+    esJavaOpts: "-Xms1024m -Xmx1024m"
+    persistence:
+        enabled: true
+    service:
+        type: ClusterIP
+    resources:
+        requests:
+            cpu: "100m"
+            memory: "512M"
+        limits:
+            cpu: "1000m"
+            memory: "512M"
+    volumeClaimTemplate:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "hostpath"
+      resources:
+        requests:
+          storage: 100M
+
+persistence:
+    enabled: true
+    baseSize: 20Gi
+    storageClass: #enable and define if you already have a custom storage class defined
+        enabled: false
+        accessModes:
+            - ReadWriteMany
+        name: "nfs" #Custom storage classs name
+
+
+
+

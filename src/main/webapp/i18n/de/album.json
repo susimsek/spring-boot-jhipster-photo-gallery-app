@@ -1,0 +1,28 @@
+{
+  "galleryApp": {
+    "album": {
+      "home": {
+        "title": "Albums",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Album erstellen",
+        "createOrEditLabel": "Album erstellen oder bearbeiten",
+        "search": "Suche nach Album",
+        "notFound": "Keine Albums gefunden"
+      },
+      "created": "Album erstellt mit ID {{ param }}",
+      "updated": "Album aktualisiert mit ID {{ param }}",
+      "deleted": "Album gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Album {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Album"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "created": "Created",
+      "user": "User"
+    }
+  }
+}

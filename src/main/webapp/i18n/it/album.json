@@ -1,0 +1,28 @@
+{
+  "galleryApp": {
+    "album": {
+      "home": {
+        "title": "Albums",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Album",
+        "createOrEditLabel": "Genera o modifica un Album",
+        "search": "Cerca Album",
+        "notFound": "No Albums found"
+      },
+      "created": "&Egrave; stato generato un nuovo Album con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Album identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Album con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Album {{ id }}?"
+      },
+      "detail": {
+        "title": "Album"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "created": "Created",
+      "user": "User"
+    }
+  }
+}

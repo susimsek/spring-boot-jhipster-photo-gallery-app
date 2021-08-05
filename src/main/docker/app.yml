@@ -1,0 +1,51 @@
+# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+version: '3.8'
+services:
+  gallery-app:
+    image: suayb/gallery:latest
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,api-docs
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://gallery-postgresql:5432/gallery
+      - SPRING_LIQUIBASE_URL=jdbc:postgresql://gallery-postgresql:5432/gallery
+      - JHIPSTER_CACHE_REDIS_SERVER=redis://gallery-redis:6379
+      - JHIPSTER_CACHE_REDIS_CLUSTER=false
+      # - JHIPSTER_CACHE_REDIS_SERVER=redis://gallery-redis:6379
+      # - JHIPSTER_CACHE_REDIS_CLUSTER=true
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+      - SPRING_ELASTICSEARCH_REST_URIS=http://gallery-elasticsearch:9200
+    # If you want to expose these ports outside your dev PC,
+    # remove the "127.0.0.1:" prefix
+    ports:
+      - 127.0.0.1:9090:9090
+  gallery-postgresql:
+    image: postgres:13.3
+    # volumes:
+    #   - ~/volumes/jhipster/gallery/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=gallery
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    # If you want to expose these ports outside your dev PC,
+    # remove the "127.0.0.1:" prefix
+    ports:
+      - 127.0.0.1:5432:5432
+  gallery-redis:
+    image: redis:6.2.4
+    # If you want to expose these ports outside your dev PC,
+    # remove the "127.0.0.1:" prefix
+    ports:
+      - 127.0.0.1:6379:6379
+  gallery-elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.3
+    # volumes:
+    #   - ~/volumes/jhipster/gallery/elasticsearch/:/usr/share/elasticsearch/data/
+    # If you want to expose these ports outside your dev PC,
+    # remove the "127.0.0.1:" prefix
+    ports:
+      - 127.0.0.1:9200:9200
+      - 127.0.0.1:9300:9300
+    environment:
+      - 'ES_JAVA_OPTS=-Xms1024m -Xmx1024m'
+      - 'discovery.type=single-node'

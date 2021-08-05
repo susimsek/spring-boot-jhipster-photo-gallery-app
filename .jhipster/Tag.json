@@ -1,0 +1,31 @@
+{
+  "name": "Tag",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "2"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "photo",
+      "otherEntityRelationshipName": "tag",
+      "relationshipName": "photo",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "tag",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["gallery"],
+  "searchEngine": "elasticsearch",
+  "changelogDate": "20210804091935"
+}
