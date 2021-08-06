@@ -15,7 +15,7 @@
 ## Build Docker Image
 
 ```sh
-./mvnw -Pprod jib:dockerBuild celan verify
+./mvnw -Pprod jib:dockerBuild clean verify
 ```
 
 ## Installation
