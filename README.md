@@ -24,6 +24,8 @@
 docker-compose up -d 
 ```
 
+Then navigate to http://localhost:9090 in your browser.
+
 ## Swagger
 <img src="https://github.com/susimsek/spring-boot-jhipster-photo-gallery-app/blob/main/images/swagger.png" alt="Spring Boot Jhipster Photo Gallery App Swagger" width="100%" height="100%"/>
 
